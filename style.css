@@ -11,7 +11,8 @@ input[type=text] {
     font-size: 0.9em;
 }
 
-.shape-field {
+#shape-field {
+    position: relative;
     background-color: lightgray;
     height: 600px;
     width: 600px;
@@ -23,4 +24,8 @@ input[type=text] {
     height: 600px;
     width: 400px;
     font-size: 1.25em;
+}
+.shape {
+    position: absolute;
+    background-color: black;
 }
