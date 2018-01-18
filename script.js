@@ -7,6 +7,7 @@ let selWidth = document.getElementById("sel-width");
 let selHeight = document.getElementById("sel-height");
 let selArea = document.getElementById("sel-area");
 let selPerim = document.getElementById("sel-perimiter");
+let selRadius = document.getElementById("sel-radius");
 
 //global functions
 function randomVal(min, max) {
@@ -14,9 +15,9 @@ function randomVal(min, max) {
 }
 
 class Shape {
-    constructor(height, width) { //
-        this.height = height; //
-        this.width = width; //
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
         this.div = document.createElement('div');
         this.div.classList.add('shape');
         container.appendChild(this.div);
@@ -50,7 +51,7 @@ class Rectangle extends Shape {
         this.div.addEventListener("click", () => {
             this.describe(this.div.id, this.height, this.width);
             selArea.innerHTML = `Area: ${height * width}`;
-            selPerim.innerHTML = `Perimiter: ${(height * 2) + (width * 2)}`;
+            selPerim.innerHTML = `perimeterer: ${(height * 2) + (width * 2)}`;
         });
         this.div.addEventListener("dblclick", () => {
             this.remove();
@@ -67,9 +68,9 @@ class Square extends Shape {
         this.div.style.width = `${sideLength}px`;
         this.randomLocation();
         this.div.addEventListener("click", () => {
-            this.describe(this.div.id, this.height, this.width);
+            this.describe(this.div.id, this.sideLength, this.sideLength);
             selArea.innerHTML = `Area: ${sideLength * sideLength}`;
-            selPerim.innerHTML = `Perimiter: ${sideLength * 4}`;
+            selPerim.innerHTML = `perimeterer: ${sideLength * 4}`;
         });
         this.div.addEventListener("dblclick", () => {
             this.remove();
@@ -87,8 +88,10 @@ class Circle extends Shape {
         this.randomLocation();
         this.div.addEventListener("click", () => {
             this.describe(this.div.id, this.radius, this.radius);
-            selArea.innerHTML = `Area: ${(radius * radius) * 3.14}`;
-            selPerim.innerHTML = `Perimiter: ${2 * 3.14 * radius}`;
+            selWidth.innerHTML = `Height/Width: ${radius * 2}`;
+            selHeight.innerHTML = `Radius: ${radius}`;
+            selArea.innerHTML = `Area: ${(radius * radius) * Math.PI}`;
+            selPerim.innerHTML = `Circumfrence: ${2 * Math.PI * radius}`;
         });
         this.div.addEventListener("dblclick", () => {
             this.remove();
@@ -106,7 +109,7 @@ class Triangle extends Shape {
         this.div.addEventListener("click", () => {
             this.describe(this.div.id, this.height, this.width);
             selArea.innerHTML = `Area: ${0.5 * height * height}`;
-            selPerim.innerHTML = `Perimiter: ${2 * height + Math.sqrt(2) * height}`;
+            selPerim.innerHTML = `perimeterer: ${2 * height + Math.sqrt(2) * height}`;
         });
         this.div.addEventListener("dblclick", () => {
             this.remove();
