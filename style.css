@@ -29,7 +29,24 @@ input[type=text] {
     position: absolute;
 }
 
+#rectangle {
+    background-color: green;
+    opacity: 0.75;
+}
+
 #square {
     background-color: red;
     opacity: 0.75;
+}
+
+#circle {
+    background-color: purple;
+    opacity: 0.75;
+    border-radius: 50%;
+}
+
+#triangle {
+    opacity: 0.75;
+    width: 0;
+    height: 0;
 }
