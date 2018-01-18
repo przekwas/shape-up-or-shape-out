@@ -1,0 +1,26 @@
+button {
+    font-size: 0.75em;
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 2px solid black;
+    border-radius: 1em;
+}
+
+input[type=text] {
+    border: 1px solid red;
+    font-size: 0.9em;
+}
+
+.shape-field {
+    background-color: lightgray;
+    height: 600px;
+    width: 600px;
+}
+
+.property-field {
+    background-color: black;
+    color: white;
+    height: 600px;
+    width: 400px;
+    font-size: 1.25em;
+}
