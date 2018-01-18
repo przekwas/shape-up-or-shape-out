@@ -18,7 +18,7 @@ input[type=text] {
     width: 600px;
 }
 
-.property-field {
+#property-field {
     background-color: black;
     color: white;
     height: 600px;
@@ -27,5 +27,9 @@ input[type=text] {
 }
 .shape {
     position: absolute;
-    background-color: black;
+}
+
+#square {
+    background-color: red;
+    opacity: 0.75;
 }
